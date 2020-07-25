@@ -10,6 +10,7 @@ Your also need to have the following code embded in the site to configure the to
 
 ```html
 <script>
+  // Configuration
   window.__config = {
     success: {
       title: "Yes, we whores at... {address}!",
@@ -25,6 +26,8 @@ Your also need to have the following code embded in the site to configure the to
       url: "https://bitches.com",
     },
   };
+
+  // Delivery options
   window.__options = {
     "wed-mon": "10pm Wednesday for Monday delivery",
     "thu-tue": "10pm Thursday for Tuesday delivery",
@@ -33,6 +36,8 @@ Your also need to have the following code embded in the site to configure the to
     "wed-sat": "10pm Wednesday for Saturday delivery",
     "wed-sun": "10pm Wednesday for Sunday delivery",
   };
+
+  // Delivery areas
   window.__areas = [
     {
       id: "brisbane-metro",
