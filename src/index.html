@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh6nHe48BO9vpCF9QDuDAxd3bftfY6Bg0&libraries=places"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <script>
+      window.__config = {
+        "success": {
+          "title": "Yes, we whores at... {address}!",
+          "sub_title": "Your penis smells {address}",
+          "button_text": "Start Shopping",
+          "url": "https://sluts.com"
+        },
+        "failure": {
+          "title": "Non Perishables Only {address}",
+          "sub_title": "We only deliver non-perishable products to your area via Australia Post.",
+          "button_text": "View non-perishable products",
+          "url": "https://bitches.com"
+        }        
+      };      
+      window.__options = {
+        "wed-mon": "10pm Wednesday for Monday delivery",
+        "thu-tue": "10pm Thursday for Tuesday delivery",
+        "sun-wed": "10pm Sunday for Wednesday delivery",
+        "tue-fri": "10pm Tuesday for Friday delivery",
+        "wed-sat": "10pm Wednesday for Saturday delivery",
+        "wed-sun": "10pm Wednesday for Sunday delivery",
+      };
+      window.__areas = [
+        {
+          id: "brisbane-metro",
+          name: "Brisbane Metro",
+          note: "$8.50 delivery or FREE delivery over $150.",
+          suburbs: ["Saint Lucia", "ACACIA RIDGE", "ALBANY CREEK", "ALBION"],
+          options: [
+            "wed-mon",
+            "thu-tue",
+            "sun-wed",
+            "tue-fri",
+            "wed-sat",
+            "wed-sun",
+          ],
+        },
+        {
+          id: "gold-coast",
+          name: "Gold Coast",
+          note: "$8.50 delivery or FREE delivery over $150.",
+          suburbs: ["ARUNDEL", "ASHMORE", "ASHMORE CITY"],
+          options: ["wed-mon", "tue-fri"],
+        },
+        {
+          id: "sunshine-coast",
+          name: "Sunshine Coast",
+          note: "$9.50 delivery or FREE delivery over $150.",
+          suburbs: ["ALEXANDRA HEADLAND", "AROONA", "BALD KNOB"],
+          options: ["thu-tue", "tue-fri", "wed-sat"],
+        },
+        {
+          id: "toowoomba",
+          name: "Toowoomba",
+          note: "$9.50 delivery or FREE delivery over $150.",
+          suburbs: ["BALLARD", "BIRNAM", "BLUE MOUNTAIN HEIGHTS"],
+          options: ["wed-mon", "tue-fri"],
+        },
+        {
+          id: "byron-bay",
+          name: "Byron Bay",
+          note: "$9.50 delivery or FREE delivery over $150.",
+          suburbs: ["BALLINA", "BALLINA", "BANORA POINT"],
+          options: ["tue-fri"],
+        },
+        {
+          id: "bowen",
+          name: "Bowen",
+          note: "$9.50 delivery or FREE delivery over $150.",
+          suburbs: ["AIRLIE BEACH", "BOWEN", "CANNONVALE"],
+          options: ["thu-tue"],
+        },
+        {
+          id: "bundaberg",
+          name: "Bundaberg",
+          note: "Minimum Order $150. Delivery fee $20 or FREE delivery over $300.",
+          suburbs: ["ALLOWAY", "ASHFIELD", "AVENELL HEIGHTS"],
+          options: ["thu-tue"],
+        },
+        {
+          id: "cairns",
+          name: "Cairns",
+          note: "Minimum Order $150. Delivery fee $20 or FREE delivery over $300.",
+          suburbs: ["AEROGLEN", "BARRON", "BARRON GORGE"],
+          options: ["wed-mon"],
+        },
+        {
+          id: "Gladstone",
+          name: "gladstone",
+          note: "Minimum Order $150. Delivery fee $20 or FREE delivery over $300.",
+          suburbs: ["Barney Point", "Benaraby", "Boyne Island"],
+          options: ["thu-tue"],
+        },
+        {
+          id: "mackay",
+          name: "Mackay",
+          note: "Minimum Order $150. Delivery fee $20 or FREE delivery over $300.",
+          suburbs: ["Alligator Creek", "Andergrove", "Balnagowan"],
+          options: ["wed-mon"],
+        },
+        {
+          id: "rockhampton",
+          name: "Rockhampton",
+          note: "Minimum Order $150. Delivery fee $20 or FREE delivery over $300.",
+          suburbs: ["Allentown", "Allentown", "Barlows Hill"],
+          options: ["wed-mon"],
+        },
+        {
+          id: "townsville",
+          name: "Townsville",
+          note: "Minimum Order $150. Delivery fee $20 or FREE delivery over $300.",
+          suburbs: ["Aitkenvale", "Alice River", "Annandale"],
+          options: ["wed-mon"],
+        },
+      ];
+    </script>
+    <div id="app"></div>
+  </body>
+</html>
