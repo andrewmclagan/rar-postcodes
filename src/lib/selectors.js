@@ -1,5 +1,5 @@
 function arrayToLower(values) {
-  return values.map((value) => value.toLowerCase());
+  return values.map((value) => String(value).toLowerCase());
 }
 
 export function addressComponentsSelector(suggest) {
@@ -40,10 +40,10 @@ export function addressSelector(suggest) {
 }
 
 export function deliveryAreaSelector(suggest) {
-  console.log("suggestion", suggest);
   const suburb = suburbSelector(suggest);
   const result = window.__areas.filter((area) => {
-    return arrayToLower(area.suburbs).includes(suburb.toLowerCase());
+    const suburbAsLower = String(suburb).toLowerCase();
+    return arrayToLower(area.suburbs).includes(suburbAsLower);
   });
   return result[0];
 }

@@ -9,6 +9,7 @@ const Input = ({ onSelect }) => (
     placeholder="Check my suburb..."
     onSuggestSelect={onSelect}
     autoActivateFirstSuggest={true}
+    autocomplete="false"
   />
 );
 
