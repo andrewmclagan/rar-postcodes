@@ -1,47 +1,79 @@
 import React from "react";
-import Failure from "../components/Failure";
-import Success from "../components/Success";
+import Result from "../components/Result";
 import Input from "../components/Input";
-import Dialog from "@material-ui/core/Dialog";
 import {
   isValidDeliveryArea,
   addressSelector,
   deliveryAreaSelector,
 } from "../lib/selectors";
 
+const initialState = {
+  open: false,
+  isMatch: false,
+  address: null,
+  deliveryArea: null,
+};
+
 export default class DeliveryAreaSearch extends React.Component {
   state = {
-    isDialogOpen: false,
-    isMatch: false,
-    address: null,
-    deliveryArea: null,
+    ...initialState,
   };
 
-  closeDialog = () => this.setState({ isDialogOpen: false });
+  setClosed = () => this.setState({ open: false });
 
-  openDialog = () => this.setState({ isDialogOpen: true });
+  setOpen = () => this.setState({ open: true });
 
   onSelect = (suggestion) => {
-    this.setState({
-      isMatch: isValidDeliveryArea(suggestion),
-      address: addressSelector(suggestion),
-      deliveryArea: deliveryAreaSelector(suggestion),
-    });
-    this.openDialog();
+    if (suggestion && suggestion.label) {
+      this.setState({
+        isMatch: isValidDeliveryArea(suggestion),
+        address: addressSelector(suggestion),
+        deliveryArea: deliveryAreaSelector(suggestion),
+      });
+      this.setOpen();
+    } else if (suggestion && !suggestion.label) {
+      this.setState(initialState);
+    }
   };
 
   render() {
-    const { isDialogOpen, isMatch, address, deliveryArea } = this.state;
+    const { open, isMatch, address, deliveryArea } = this.state;
+
+    const config = window.__config;
+
+    let resultProps = {
+      address,
+      deliveryArea,
+    };
+
+    if (isMatch) {
+      resultProps = {
+        ...resultProps,
+        title: config.success.title.replace("##address##", address),
+        subTitle: config.success.sub_title.replace(
+          "##address##",
+          address
+        ),
+        url: config.success.url,
+        actionText: config.success.button_text,
+      };
+    } else {
+      resultProps = {
+        ...resultProps,
+        title: config.failure.title.replace("##address##", address),
+        subTitle: config.failure.sub_title.replace(
+          "##address##",
+          address
+        ),
+        url: config.failure.url,
+        actionText: config.failure.button_text,
+      };
+    }
 
     return (
       <div id="delivery-areas-search">
         <Input onSelect={this.onSelect} />
-        <Dialog open={isDialogOpen} onClose={this.closeDialog}>
-          {isMatch && <Success address={address} deliveryArea={deliveryArea} />}
-          {isMatch === false && (
-            <Failure address={address} deliveryArea={deliveryArea} />
-          )}
-        </Dialog>
+        {open && <Result {...resultProps} />}
       </div>
     );
   }

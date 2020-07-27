@@ -4,7 +4,7 @@ body {
 
 #delivery-areas-search {
   width: 800px;
-  height: 115px;
+  height: auto;
   position: relative;
 }
 
@@ -155,4 +155,28 @@ input[type="text"].geosuggest__input::placeholder {
     width: 100%;
     transform: scale(1);
   }
+}
+
+.da-result-root .da-result {
+  text-align: center;  
+  max-width: 550px;
+  margin: 13px auto;  
+}
+.da-result-root ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.da-result-root .da-result-list li:first-child {
+  border-top: 1px solid #e0e0e0;
+}
+.da-result-root .da-result-list li {
+  border-bottom: 1px solid #e0e0e0;
+}
+.da-result-title {
+  color: #ff6400;
+}
+.btn.da-result-btn {
+  max-width: 200px;
+  margin: 0 auto;  
 }
