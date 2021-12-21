@@ -14,8 +14,8 @@ Your also need to have the following code embded in the site to configure the to
   // Configuration
   window.__config = {
     success: {
-      title: "Yes, we whores at... {address}!",
-      sub_title: "Your penis smells {address}",
+      title: "Yes, we sell at... {address}!",
+      sub_title: "Your smells {address}",
       button_text: "Start Shopping",
       url: "https://sluts.com",
     },
@@ -24,7 +24,7 @@ Your also need to have the following code embded in the site to configure the to
       sub_title:
         "We only deliver non-perishable products to your area via Australia Post.",
       button_text: "View non-perishable products",
-      url: "https://bitches.com",
+      url: "https://ripenraworganics.com.au",
     },
   };
 
