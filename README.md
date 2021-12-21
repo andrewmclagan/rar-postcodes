@@ -17,7 +17,7 @@ Your also need to have the following code embded in the site to configure the to
       title: "Yes, we sell at... {address}!",
       sub_title: "Your smells {address}",
       button_text: "Start Shopping",
-      url: "https://sluts.com",
+      url: "https://helloworld.com",
     },
     failure: {
       title: "Non Perishables Only {address}",
